@@ -1,5 +1,23 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<button onclick={{action toggleProperty 'showControl'}}>
+  {{#if showControl}}
+    Hide Draw Control
+  {{else}}
+    Show Draw Control
+  {{/if}}
+</button>
 
-{{outlet}}
+<button onclick={{action toggleProperty 'showMap'}}>
+  {{#if showMap}}
+    Hide Map
+  {{else}}
+    Show Map
+  {{/if}}
+</button>
+
+{{#if showMap}}
+  {{#mapbox-gl as |map|}}
+    {{#if showControl}}
+      {{map.control (draw-control) 'top-left'}}
+    {{/if}}
+  {{/mapbox-gl}}
+{{/if}}

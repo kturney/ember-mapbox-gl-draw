@@ -1,26 +1,33 @@
 # ember-mapbox-gl-draw
 
-This README outlines the details of collaborating on this Ember addon.
+[![Latest NPM release][npm-badge]][npm-badge-url]
+[![TravisCI Build Status][travis-badge]][travis-badge-url]
+[![Ember Observer Score][ember-observer-badge]][ember-observer-url]
+
+[npm-badge]: https://img.shields.io/npm/v/ember-mapbox-gl-draw.svg
+[npm-badge-url]: https://www.npmjs.com/package/ember-mapbox-gl-draw
+[travis-badge]: https://img.shields.io/travis/kturney/ember-mapbox-gl-draw/master.svg
+[travis-badge-url]: https://travis-ci.org/kturney/ember-mapbox-gl-draw
+[ember-observer-badge]: http://emberobserver.com/badges/ember-mapbox-gl-draw.svg
+[ember-observer-url]: http://emberobserver.com/addons/ember-mapbox-gl-draw
+
+Ember addon to import the [mapbox-gl-draw control](https://github.com/mapbox/mapbox-gl-draw).
+Also provides a helper to create draw controls in templates.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-mapbox-gl-draw`
-* `npm install`
+```sh
+ember install ember-mapbox-gl
+```
 
-## Running
+## Example
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```handlebars
+{{#mapbox-gl as |map|}}
+  {{map.control (draw-control touchEnabled=true) 'top-left'}}
+{{/mapbox-gl}}
+```
 
-## Running Tests
+## Notes
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+Global options for draw controls may also be added to a `mapbox-gl-draw` object in `config/environment.js`.
