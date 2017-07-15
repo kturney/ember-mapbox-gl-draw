@@ -106,9 +106,9 @@
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@mapbox/gl-matrix/-/gl-matrix-0.0.1.tgz#e5126aab4d64c36b81c7a97d0ae0dddde5773d2b"
 
-"@mapbox/mapbox-gl-draw@0.17.3":
-  version "0.17.3"
-  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-draw/-/mapbox-gl-draw-0.17.3.tgz#7c4cf667b29edf93166c730cf6d2bda281f99f45"
+"@mapbox/mapbox-gl-draw@^0.19.1":
+  version "0.19.1"
+  resolved "https://registry.yarnpkg.com/@mapbox/mapbox-gl-draw/-/mapbox-gl-draw-0.19.1.tgz#d9e164a0889da77c5e85deef55c604d17b35c559"
   dependencies:
     "@mapbox/geojson-area" "^0.2.1"
     "@mapbox/geojson-normalize" "0.0.1"
