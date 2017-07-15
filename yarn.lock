@@ -2369,17 +2369,17 @@ ember-load-initializers@^1.0.0:
   dependencies:
     ember-cli-babel "^6.0.0-beta.7"
 
-ember-mapbox-gl@^0.3.1:
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/ember-mapbox-gl/-/ember-mapbox-gl-0.3.2.tgz#ff82b291ad42345cf9f0a2a15528ee2bddf8f0a2"
+ember-mapbox-gl@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/ember-mapbox-gl/-/ember-mapbox-gl-0.4.0.tgz#8920ab21d0376fa7d0aaf4bcdc48a8b93a68cb93"
   dependencies:
     broccoli-funnel "^1.1.0"
     broccoli-merge-trees "^2.0.0"
     ember-assign-polyfill "^2.0.1"
-    ember-cli-babel "^6.0.0"
-    ember-cli-htmlbars "^1.1.1"
+    ember-cli-babel "^6.3.0"
+    ember-cli-htmlbars "^2.0.1"
     ember-wormhole "^0.5.1"
-    mapbox-gl "^0.37.0"
+    mapbox-gl "^0.38.0"
 
 ember-qunit@^2.1.3:
   version "2.1.4"
@@ -4093,9 +4093,9 @@ mapbox-gl-supported@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mapbox-gl-supported/-/mapbox-gl-supported-1.2.0.tgz#cbd34df894206cadda9a33c8d9a4609f26bb1989"
 
-mapbox-gl@^0.37.0:
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-0.37.0.tgz#20103b0ae73a0e77fe9405439749318b87c04f10"
+mapbox-gl@^0.38.0:
+  version "0.38.0"
+  resolved "https://registry.yarnpkg.com/mapbox-gl/-/mapbox-gl-0.38.0.tgz#64731bb55eabdaa520270815175fcf31e5a3cd80"
   dependencies:
     "@mapbox/gl-matrix" "^0.0.1"
     "@mapbox/shelf-pack" "^3.0.0"
