@@ -21,9 +21,22 @@ module.exports = {
     return mapboxGlDrawTree;
   },
 
+  treeForStyles(tree) {
+    const mapboxGlTree = new Funnel(Path.dirname(require.resolve('@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.js')), {
+      files: [ 'mapbox-gl-draw.css' ],
+      destDir: 'app/styles'
+    });
+
+    if (tree) {
+      return new MergeTrees([ tree, mapboxGlTree ]);
+    }
+
+    return mapboxGlTree;
+  },
+
   treeForVendor(vendorTree) {
     const mapboxGlDrawTree = new Funnel(Path.dirname(require.resolve('@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.js')), {
-      files: [ 'mapbox-gl-draw.js', 'mapbox-gl-draw.css' ],
+      files: [ 'mapbox-gl-draw.js' ],
     });
 
     if (vendorTree) {
@@ -33,15 +46,15 @@ module.exports = {
     return mapboxGlDrawTree;
   },
 
-  included() {
+  included(app) {
     this._super.included(...arguments);
 
-    this.import('vendor/mapbox-gl-draw.js', {
+    app.import('vendor/mapbox-gl-draw.js', {
       using: [
         { transformation: 'amd', as: 'mapbox-gl-draw' }
       ]
     });
 
-    this.import('vendor/mapbox-gl-draw.css');
+    app.import('app/styles/mapbox-gl-draw.css');
   }
 };
