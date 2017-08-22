@@ -18,7 +18,7 @@
     "test": "ember try:each"
   },
   "dependencies": {
-    "@mapbox/mapbox-gl-draw": "^0.19.1",
+    "@mapbox/mapbox-gl-draw": "^1.0.0",
     "broccoli-funnel": "^1.2.0",
     "broccoli-merge-trees": "^2.0.0",
     "ember-assign-polyfill": "^2.0.1",
