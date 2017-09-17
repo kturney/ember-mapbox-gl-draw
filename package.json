@@ -1,6 +1,6 @@
 {
   "name": "ember-mapbox-gl-draw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Ember addon to import mapbox-gl-draw.",
   "keywords": [
     "ember-addon"
