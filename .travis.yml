@@ -4,6 +4,10 @@ node_js:
   - "6"
 
 sudo: false
+dist: trusty
+
+addons:
+  chrome: stable
 
 cache:
   yarn: true
@@ -23,12 +27,8 @@ matrix:
   allow_failures:
     - env: EMBER_TRY_SCENARIO=ember-canary
 
-before_install:
-  - yarn global add phantomjs-prebuilt
-  - phantomjs --version
-
 install:
-  - yarn install --no-lockfile
+  - yarn install --pure-lockfile
 
 script:
   # Usually, it's ok to finish the test scenario without reverting
