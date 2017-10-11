@@ -1,11 +1,7 @@
-import Ember from 'ember';
+import { assign } from '@ember/polyfills';
+import { getOwner } from '@ember/application';
+import Helper from '@ember/component/helper';
 import MapboxDraw from 'mapbox-gl-draw';
-
-const {
-  assign,
-  getOwner,
-  Helper
-} = Ember;
 
 export default Helper.extend({
   compute(params, hash) {
