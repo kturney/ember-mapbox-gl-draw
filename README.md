@@ -17,7 +17,7 @@ Also provides a helper to create draw controls in templates.
 ## Installation
 
 ```sh
-ember install ember-mapbox-gl
+ember install ember-mapbox-gl-draw 
 ```
 
 ## Example
