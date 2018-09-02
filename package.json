@@ -22,7 +22,8 @@
   "dependencies": {
     "@mapbox/mapbox-gl-draw": "^1.0.0",
     "broccoli-funnel": "^2.0.1",
-    "broccoli-merge-trees": "^2.0.0",
+    "broccoli-merge-trees": "^3.0.1",
+    "ember-auto-import": "^1.2.13",
     "ember-cli-babel": "^6.6.0"
   },
   "devDependencies": {
@@ -35,17 +36,17 @@
     "ember-cli-qunit": "^4.3.2",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-load-initializers": "^1.1.0",
-    "ember-mapbox-gl": "^0.8.2",
+    "ember-mapbox-gl": "^0.10.0",
     "ember-maybe-import-regenerator": "^0.1.6",
     "ember-resolver": "^4.0.0",
     "ember-source": "~3.3.0",
     "ember-source-channel-url": "^1.0.1",
     "ember-try": "^0.2.23",
     "eslint-plugin-ember": "^5.0.0",
-    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-node": "^7.0.1",
     "loader.js": "^4.2.3",
-    "mapbox-gl": "^0.42.2",
-    "qunit-dom": "^0.6.2"
+    "mapbox-gl": "^0.48.0",
+    "qunit-dom": "^0.7.1"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"

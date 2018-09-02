@@ -33,26 +33,8 @@ module.exports = {
     return mapboxGlTree;
   },
 
-  treeForVendor(vendorTree) {
-    const mapboxGlDrawTree = new Funnel(Path.dirname(require.resolve('@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.js')), {
-      files: [ 'mapbox-gl-draw.js' ],
-    });
-
-    if (vendorTree) {
-      return new MergeTrees([ vendorTree, mapboxGlDrawTree ]);
-    }
-
-    return mapboxGlDrawTree;
-  },
-
   included(app) {
     this._super.included.apply(this, arguments);
-
-    app.import('vendor/mapbox-gl-draw.js', {
-      using: [
-        { transformation: 'amd', as: 'mapbox-gl-draw' }
-      ]
-    });
 
     app.import('app/styles/mapbox-gl-draw.css');
   }
