@@ -1,16 +1,14 @@
-import { test } from 'qunit';
-import { moduleFor } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupTest } from 'ember-qunit';
 import MapboxDraw from 'mapbox-gl-draw';
 
-moduleFor('helper:draw-control', 'Unit | Helper | draw control', {
-  needs: [
-    'config:environment'
-  ]
-});
+module('Unit | Helper | draw control', function(hooks) {
+  setupTest(hooks);
 
-// Replace this with your real tests.
-test('it should create a mapbox-gl-draw control', function(assert) {
-  let result = this.subject().compute();
-  assert.ok(result instanceof MapboxDraw, 'is a mapbox-gl-draw control');
+  // Replace this with your real tests.
+  test('it should create a mapbox-gl-draw control', function(assert) {
+    let result = this.owner.lookup('helper:draw-control').compute();
+    assert.ok(result instanceof MapboxDraw, 'is a mapbox-gl-draw control');
+  });
 });
 
