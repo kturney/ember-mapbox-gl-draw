@@ -5,7 +5,7 @@ const MergeTrees = require('broccoli-merge-trees');
 const Path = require('path');
 
 module.exports = {
-  name: 'ember-mapbox-gl-draw',
+  name: require('./package').name,
 
   treeForPublic(vendorTree) {
     const mapboxGlDrawTree = new Funnel(Path.dirname(require.resolve('@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.js')), {
