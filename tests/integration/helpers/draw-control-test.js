@@ -17,7 +17,7 @@ module('Integration | Helper | draw-control', function(hooks) {
       assert.ok(control instanceof MapboxDraw, 'is a mapbox-gl-draw control');
     };
 
-    await render(hbs`{{compute onControl (draw-control)}}`);
+    await render(hbs`{{compute this.onControl (draw-control)}}`);
 
     assert.verifySteps([
       'onControl'
@@ -53,11 +53,11 @@ module('Integration | Helper | draw-control', function(hooks) {
       );
     };
 
-    await render(hbs`{{compute onControl (draw-control
-      keybindings=keybindings
+    await render(hbs`{{compute this.onControl (draw-control
+      keybindings=this.keybindings
       controls=(hash
-        point=point
-        line_string=lineString
+        point=this.point
+        line_string=this.lineString
       )
     )}}`);
 
@@ -101,7 +101,7 @@ module('Integration | Helper | draw-control', function(hooks) {
       );
     };
 
-    await render(hbs`{{compute onControl (draw-control)}}`);
+    await render(hbs`{{compute this.onControl (draw-control)}}`);
 
     assert.verifySteps([
       'onControl'
@@ -145,10 +145,10 @@ module('Integration | Helper | draw-control', function(hooks) {
       );
     };
 
-    await render(hbs`{{compute onControl (draw-control
-      keybindings=keybindings
+    await render(hbs`{{compute this.onControl (draw-control
+      keybindings=this.keybindings
       controls=(hash
-        point=point
+        point=this.point
       )
     )}}`);
 
