@@ -1,23 +1,23 @@
-<button onclick={{action toggleProperty 'showControl'}}>
-  {{#if showControl}}
+<button type='button' {{on 'click' (fn this.toggleProperty 'showControl')}}>
+  {{#if this.showControl}}
     Hide Draw Control
   {{else}}
     Show Draw Control
   {{/if}}
 </button>
 
-<button onclick={{action toggleProperty 'showMap'}}>
-  {{#if showMap}}
+<button type='button' {{on 'click' (fn this.toggleProperty 'showMap')}}>
+  {{#if this.showMap}}
     Hide Map
   {{else}}
     Show Map
   {{/if}}
 </button>
 
-{{#if showMap}}
-  {{#mapbox-gl as |map|}}
-    {{#if showControl}}
-      {{map.control (draw-control) 'top-left'}}
+{{#if this.showMap}}
+  <MapboxGl as |Map|>
+    {{#if this.showControl}}
+      {{Map.control (draw-control) 'top-left'}}
     {{/if}}
-  {{/mapbox-gl}}
+  </MapboxGl>
 {{/if}}
