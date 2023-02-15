@@ -10,7 +10,8 @@ module.exports = {
   treeForPublic(vendorTree) {
     const mapboxGlDrawTree = new Funnel(Path.dirname(require.resolve('@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.js')), {
       srcDir: '/svg',
-      destDir: '/assets/images'
+      destDir: '/assets/images',
+      allowEmpty: true
     });
 
     if (vendorTree) {
